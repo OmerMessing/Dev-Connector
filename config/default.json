@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://Omer123:Omer123@cluster0.wfyeg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "b1e7056c4469d773ed55",
+    "githubSecret": "af9ac8ca150eafc0faecd1dccb18d72828ee847e"
+}
