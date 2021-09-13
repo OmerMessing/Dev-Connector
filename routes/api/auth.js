@@ -15,13 +15,14 @@ const router = express.Router();
 
     router.get('/', auth, async (req, res) => {
         
-        res.send('AUTH ROUTE')
+        // res.send('AUTH ROUTE')
             try {
-                    const user = await User.findbyId(req.user.id).select('-password');
+                    const user = await User.findById(req.user.id).select('-password');
+     
                     res.json(user);
 
             } catch(err) {
-                    console.error(err.messaage);
+                    console.error(err);
                     res.status(500).send('Server error')
 
             }
