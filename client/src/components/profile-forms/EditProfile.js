@@ -48,7 +48,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, history, ge
 
     const { company, website, location, status, skills, githubusername, bio, twitter, facebook, linkedin, youtube, instagram } = formData;
 
-    const onChange = e => setFormData({ ... formData, [e.target.name]: e.target.value })
+    const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
 
     const onSubmit = e => {
         e.preventDefault();
