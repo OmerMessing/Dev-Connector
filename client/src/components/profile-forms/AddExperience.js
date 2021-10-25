@@ -50,14 +50,14 @@ const [toDateDisabled,toggleDisabled] = useState(false);
         </div>
         <div className="form-group">
           <h4>From Date</h4>
-          <input type="date" name="from"  value={from} onChange={e => onChange(e)}/>
+          <input type="date" name="from" min="1940-01-01" max="2029-12-31"  value={from} onChange={e => onChange(e)}/>
         </div>
          <div className="form-group">
           <p><input type="checkbox" name="current"  value={current} onChange={e => {setFormData({...formData, current: !current}); toggleDisabled(!toDateDisabled)}}/>{' '} Current Job</p>
         </div>
         <div className="form-group">
           <h4>To Date</h4>
-          <input type="date" name="to" value={to} disabled={ toDateDisabled ? 'disabled' : '' }  onChange={e => onChange(e)} />
+          <input type="date" name="to" min="1940-01-01" max="2029-12-31" value={to} disabled={ toDateDisabled ? 'disabled' : '' }  onChange={e => onChange(e)} />
         </div>
         <div className="form-group">
           <textarea
