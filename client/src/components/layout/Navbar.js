@@ -27,15 +27,21 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
           </Link>
         </h1>
         <ul>
-          <li>
-            <a href="#!">Developers</a>
-          </li>
+        <li>
+               <Link to="/profiles">{" "}Developers</Link>
+               </li>
+     
+       
          
           {isAuthenticated ? (
               <Fragment>
                <li>
                <Link to="/dashboard"><i className="fas fa-user"></i>{" "}Dashboard</Link>
                </li>
+               <li>
+               <Link to="/posts">{" "}Posts</Link>
+               </li>
+               
             
             <li>
               <a onClick={logout} href="#!">
