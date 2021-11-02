@@ -24,6 +24,7 @@ export const CLEAR_PROFILE = "CLEAR_PROFILE";
 export const ACCOUNT_DELETED = "ACCOUNT_DELETED";
 
 export const GET_REPOS = "GET_REPOS";
+export const CLEAR_REPOS = "CLEAR_REPOS"
 
 export const GET_POSTS = "GET_POSTS";
 export const GET_POST = "GET_POST";
@@ -36,3 +37,5 @@ export const ADD_POST = "ADD_POST";
 
 export const ADD_COMMENT = "ADD_COMMENT";
 export const REMOVE_COMMENT = "REMOVE_COMMENT";
+
+export const NO_REPOS = "NO_REPOS"

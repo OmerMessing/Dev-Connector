@@ -2,7 +2,7 @@ import axios from 'axios';
 import { setAlert } from './alert';
 
 
-import { GET_PROFILE, GET_PROFILES, PROFILE_ERROR, UPDATE_PROFILE, ACCOUNT_DELETED, CLEAR_PROFILE, GET_REPOS } from './types';
+import { GET_PROFILE, GET_PROFILES, PROFILE_ERROR, UPDATE_PROFILE, ACCOUNT_DELETED, CLEAR_PROFILE, GET_REPOS, NO_REPOS } from './types';
 
 
 export const getCurrentProfile = () => async dispatch => {
@@ -56,21 +56,20 @@ export const getProfileByID = (userId) => async dispatch => {
 }
 
 
-export const getGithubrepos = (username) => async dispatch => {
-
+export const getGithubrepos = (username) => async (dispatch) => {
     try {
-
-        const res = await axios.get(`/api/profile/github/${username}`);
-        dispatch({type: GET_REPOS, payload: res.data})
-        
+      const res = await axios.get(`/api/profile/github/${username}`);
+  
+      dispatch({
+        type: GET_REPOS,
+        payload: res.data
+      });
     } catch (err) {
-
-        dispatch ({type: PROFILE_ERROR, payload: { msg: err.response.statusText, status: err.response.status }})
-        
+      dispatch({
+        type: NO_REPOS
+      });
     }
-
-}
-
+  };
 
 
 export const createProfile = (formData, history, edit = false) => async dispatch => {

@@ -42,7 +42,7 @@ const Profile = ({ match, getProfileByID, profile: { profile, loading}, auth }) 
                 </div>
 
                 {profile.githubusername && (<ProfileGithub username={profile.githubusername} />)}
-                {console.log(profile.githubusername)}
+            
 
             </div>
             
