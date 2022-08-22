@@ -1,4 +1,4 @@
-# Dev-Connector
+# Dev Connector
 A full Mern Stack application for developers that includes authentication, profiles and a forum.
 
 
