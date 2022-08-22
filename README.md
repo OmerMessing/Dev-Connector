@@ -14,7 +14,9 @@ Add a default.json inside the 'config' folder with the following code:
 {
   "mongoURI": "<your_mongoDB_Atlas_uri_with_credentials>",
   "jwtSecret": "your secret",
-  "githubToken": "<your_access_token>"
+  "githubToken": "<your_access_token>,
+  "githubClientId": "your client id",
+  "githubSecret": "your github secret"
 }
 ~~~
 
