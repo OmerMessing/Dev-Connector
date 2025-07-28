@@ -1,5 +1,5 @@
 # Dev Connector
-A full MERN Stack server & application for developers that includes authentication, profiles and a forum.
+A full MERN Stack application for developers that includes authentication, profiles and a forum.
 
 
 ## Website
